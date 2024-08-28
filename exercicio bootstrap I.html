@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Complatible"content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href = "./bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href = "./css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./style/custom.css">
     <title>Document</title>
 </head>
@@ -19,8 +19,9 @@
                     <ul class="nav justify-content-end">
 
                         <li class="nav-item"><a class="nav-link active" href="">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#sobre">saúde</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#bem-estar"> Bem-estar</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#produtos">Qualidade de Vida</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
 
                     </ul>
@@ -32,9 +33,11 @@
     <section id="sobre">
         <div class="container">
             <div class="row">
-                <div class="col-md-7 col-sm-12">
+                <div class="col-md-7 col-sm-12 ">
+                    
                     <h2>Sobre nós</h2>
-                    <p> Rotinas e Autocuidado é um lugar onde você poderá se reencontrar com os 
+                    <div class="p-3 mb-2 bg-secondary-subtle text-secondary-emphasis"> <p> 
+                        Rotinas e Autocuidado é um lugar onde você poderá se reencontrar com os 
                         seus maiores objetivos e traçar novas rotas para a sua vida de forma a 
                         valorizar os seus melhores momentos.
                         Nosso trabalho consiste em te acompanhar,  orientando suas decisões, priorizando 
@@ -47,10 +50,32 @@
                         poderemos lhe atender de maneira mais assertiva. Então acesse abaixo as 
                         nossas modalidades de atendimento. Será um prazer falar com você!
                     </p>
+                    </div>
                     <a class="btn btn-lg btn-secondary"> Saiba Mais</a>
                 </div>
                 <div class="col-md-5 col-sm-12">
-                    <img src="./imagens/rotinas.jpg" alt="imagem exemplo" class="img-fluid">
+
+                <div id="carouselRotinas" class="carousel slide">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="./imagens/rotinas.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./imagens/Já parou pra pensar o quanto o seu bem-estar é importante.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="./imagens/autocuidado.jpg" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselRotinas" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselRotinas" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
                 </div>
             </div>
         </div>
@@ -105,23 +130,78 @@
     <section id="#contato">
         <div class="container">
             <div class="row"></div>
-                <div class="col-md-6 col-sm-12">
+                <div class="col-md-6 col-sm-12" >
                     <h2> Contato </h2>
-                    <p> Ficou Interessado? Envie uma mensagem com seus dados para sabermos mais sobre você!</p>
+                    <p> Gostaria de Receber Dicas de Bem-estar diariamente ?</p>
+                    <h6>Complete o cadastro para receber nossas dicas</h6>
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <form class="form">
-                        <div class="input-group">
-                            <input class="form-control" type="text" name="nome" placeholder="digite seu nome">
+                        <div class="row">
+                            <div class="col">
+                                <div class="input-group">
+                                <input class="form-control" type="text" name="nome" placeholder="digite seu nome">
+                                </div>
+                            </div>
+                            <div class="col">
+                                 <div class="input-group" >
+                                <input class="form-control"  type="text" name="e-mail" placeholder="digite seu e-mail" >
+                                </div>
+                            </div>
+                            <div class="row">
+                            <div class="col">
+                                <div class="input-group" >
+                               <input class="form-control"  type="text" name="telefone" placeholder="telefone de contato" >
+                               </div>
+                           </div>
+                           <div class="col">
+                            <div class="input-group" >
+                           <input class="form-control"  type="text" name="Bairro" placeholder="Digite seu bairro" >
+                           </div>
+                           </div>
+                       </div>
+        
+                            <div class="row">
+                                <div class="col">
+                                <label for="endereco">Endereço Completo</label>
+                                <input type="text" id="endereco" class="form-control" placeholder="Nome da Rua e no.">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                <label for="complemento">Complemento</label>
+                                <input type="text" id="complemento" class="form-control" placeholder="complemento">
+                                </div>
+                            </div>
+        
+                            <div class="row">
+                                <div class="col">
+                                    <label for="Cidade">Cidade</label>
+                                    <input type="text" name="cidade" id="cidade" class="form-control" placeholder="digite a sua cidade">
+                                </div>
+                                <div class="col">
+                                    <label for="Estado">Estado</label>
+                                    <Select name="Estado" id="Estado"class="form-control">
+                                        <option value=""> Selecione um Estado </option>
+                                        <option value="SP">SP</option>
+                                        <option value="SP">AL</option>
+                                        <option value="SP">MG</option>
+                                        <option value="SP">SP</option>
+                                    </Select>
+                                </div>
+                            <div class="col">
+                                <label for="cep">CEP</label> 
+                                <input type="text" name="cep" id="cep" class="form-control" placeholder="00.000-000">
+                            </div>    
                         </div>
-                        <div class="input-group">
-                            <input class="form-control"  type="text" name="e-mail" placeholder="digite seu e-mail">
+                        <div class="row">
+                            <div class="col">
+                                <div class="input-group">
+                                    <label for="info" class="col-form-label-sm">Informações</label>
+                                    <textarea class="form-control" name="informacoes" id="info" rows="5"></textarea>
+                                </div>
+                            </div>
                         </div>
-                        <div class="input-group">
-                            <textarea class="form-control" name=""  rows="5"></textarea>
-                        </div>
-                        <div class="btn btn-lg btn-secondary"> Enviar mensagem</div>
-                    </form>
                 </div>
         </div>
 
@@ -250,6 +330,12 @@
         </div>
 
     </div>
-    <script src="./bootstrap-5.3.3-dist/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script>
+        var myCarousel = document.querySelector ('#carouselRotinas')
+        var carousel = new bootstrap.Carousel(myCarousel, {
+            interval:2000
+        })
+    </script>
 </body>
 </html>
